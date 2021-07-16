@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  phoenixtester:
+    image: phoenixtester
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    depends_on:
+      - "phoenixdb"
+  phoenixdb:
+    image: boostport/hbase-phoenix-all-in-one
+    ports:
+      - 8765:8765
