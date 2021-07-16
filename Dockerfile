@@ -32,4 +32,5 @@ COPY main.py /opt/mda_workflow/src/
 COPY phoenix.py /opt/mda_workflow/src/
 RUN cp supervisord.conf /etc/
 
-ENTRYPOINT ["/app/entry.sh"]
+#ENTRYPOINT ["/app/entry.sh"]
+ENTRYPOINT [ "/bin/sh","/app/entry.sh" ]
